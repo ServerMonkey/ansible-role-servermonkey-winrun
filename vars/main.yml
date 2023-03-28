@@ -1,0 +1,5 @@
+winrun_user: '{{ ansible_user }}'  # name of the Windows user
+winrun_password: '{{ ansible_password }}'  # password of the Windows user
+winrun_path: 'C:/WINDOWS/system32/calc.exe'  # can also be: /cygdrive/c/WINDOWS/system32/calc
+winrun_args: ''
+servermonkey_debug: false
