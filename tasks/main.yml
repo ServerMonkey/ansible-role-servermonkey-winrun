@@ -1,7 +1,7 @@
 ---
 #info: Start a Windows application on Desktop, user must be logged in
 - name: "Start Desktop application '{{ winrun_path | basename }}'"
-  script: 'winrun.sh {{ winrun_user }} {{ ansible_password }} {{ winrun_path }} "{{ winrun_args }}"'
+  script: 'winrun.sh {{ winrun_user }} {{ ansible_password }} {{ winrun_path }} "{{ winrun_args }}" {{ winrun_force }}'
   register: servermonkey_winrun_shell
   changed_when: servermonkey_winrun_shell.stdout != ""
   become: true
