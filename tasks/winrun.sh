@@ -34,7 +34,7 @@ fi
 APP_PATH_WIN=$(echo "$APP_PATH" | sed 's|\\|/|g')
 UUID=$(uuidgen | tr -d '-')
 TIMESTAMP=$(date +"%Y.%m.%d %H.%M %z")
-TASK_NAME="Ansible-SSH-runner $TIMESTAMP UUID-$UUID"
+TASK_NAME="Ansible-winrun $TIMESTAMP UUID-$UUID"
 INFO_TAG="UUID-$UUID $APP_PATH_WIN"
 
 # target does not exist
@@ -109,4 +109,4 @@ sleep 1
 RESULT_DEL=$(schtasks /Delete /TN "$TASK_NAME" /F 2>&1)
 check_removed "$RESULT_DEL"
 
-echo "Ansible-SSH-runner OK $UUID"
+echo "Ansible-winrun OK $UUID"

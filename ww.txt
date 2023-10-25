@@ -1,1 +1,0 @@
-Run Windows GUI applications over Ansible SSH in Cygwin
