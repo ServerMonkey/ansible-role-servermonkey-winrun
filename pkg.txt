@@ -1,2 +1,2 @@
-Version: 0.39
+Version: 0.60
 Description: Run Windows GUI applications via Cygwin

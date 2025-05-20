@@ -11,3 +11,11 @@ Example usage:
     winrun_args: '/c exit'
   when: '"CYGWIN" in ansible_os_family'
 ```
+
+```
+- include_role: name=servermonkey.winrun
+  vars:
+    winrun_path: 'msiexec.exe'
+    winrun_args: '/i \"C:\\opt\\hello_world.msi\" /quiet /passive /norestart'
+  when: '"CYGWIN" in ansible_os_family'
+```
